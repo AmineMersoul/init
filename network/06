@@ -1,0 +1,2 @@
+path of file that contains the ip IP address of the DNS server you’re using
+on this path : /etc/resolv.conf
