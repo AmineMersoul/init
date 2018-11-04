@@ -1,0 +1,10 @@
+#!/bin/bash
+md5=$(md5sum /var/spool/cron/crontabs/root)
+check=$(cat md5)
+if [ "$md5" = "$check" ]; then
+    echo "crontab not changed!"
+else
+    echo "crontab chenged sending email..."
+    $(sendmail amine.3dsmax@live.fr < mail.txt)
+    $(md5sum /var/spool/cron/crontabs/root > md5)
+fi

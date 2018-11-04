@@ -1,2 +1,0 @@
-Find Reverse DNS for 10.51.1.81
-dig +noall +answer -x 10.51.1.81
